@@ -1,0 +1,24 @@
+body{
+    background-color: gray;
+}
+
+p{
+    display: inline;
+}
+
+img{
+    height: 90vh;
+}
+
+.texts{
+	color: #ffffff;
+}
+
+#txt-h:checked ~ .texts{
+	color: #ffffff;
+}
+
+#txt-v:checked ~ .texts{
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+}

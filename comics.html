@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Pragma" content="no-cache">
+    <link href="comics.css" rel="stylesheet" type="text/css">
+    <script src="comics.js"></script>
+</head>
+<body onload="stateload()">
+<form id="form" action="" method="POST">
+    <p>filename:<input id="filename" type="text" name="filename"></p>
+    <p>pages:<input id="pages" type="text" name="pages" value="1" style="width:20px;"></p>
+    <p><input id="send" type="button" value="open" onclick="ziporrar()"></p>
+    <p><input id="prev" type="button" value="prev" onclick="fprev()"></p>
+    <p><input id="next" type="button" value="next" onclick="fnext()"></p>
+	<p><input id="save" type="button" value="save" onclick="statesave()"></p>
+	<p><input id="load" type="button" value="load" onclick="stateload()"></p>
+	<p>for txt only:</p>
+	<p>start:<input id="start" type="text" name="start" value="1" style="width:20px;"></p>
+    <p>lines:<input id="lines" type="text" name="lines" value="10" style="width:20px;"></p>
+	<p><input id="txt-h" type="radio" name="txt_hv" checked value=h>horizonal</p>
+	<p><input id="txt-v" type="radio" name="txt_hv" value=v>vertical</p>
+	<p><input id="reset" type="button" value="reset" onclick="resettxt()"></p>
+</form>
+
+<div id="pics">
+</div>
+
+
+
+</body>
+
+
+</html>
