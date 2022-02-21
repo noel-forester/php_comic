@@ -10,6 +10,30 @@ img{
     height: 90vh;
 }
 
+.pics_over_control{
+	position: relative;
+	width: fit-content;
+	height: fit-content;
+}
+
+.p_over_p{
+	position: absolute;
+	width: 49%;
+	height: 90vh;
+	left: 0px;
+	top: 0px;
+	border: solid 3px white;
+}
+
+.p_over_n{	
+	position: absolute;
+	width: 49%;
+	height: 90vh;
+	right: 0px;
+	top: 0px;
+	border:solid 3px white;
+}
+
 .texts{
 	color: #ffffff;
 }
