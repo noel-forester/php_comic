@@ -72,7 +72,6 @@ function zipopen(){
     xhr.onload = function(){
         var oURL = URL.createObjectURL(xhr.response);
         document.getElementById('pics').innerHTML = "<img src=" + oURL + "></img>";
-		URL.revokeObjectURL(oURL);
     }
     xhr.send(sendform);
 
