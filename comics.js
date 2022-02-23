@@ -1,3 +1,14 @@
+function first_load(){
+    stateload();
+    loadfilelist();
+}
+
+function loadfilelist(){
+    fetch('filelist').then(response => response.text()).then(data => {
+        document.getElementById('filelist').innerHTML = data;
+    });
+}
+
 function stateload(){
     var xhr = new XMLHttpRequest();
     xhr.open("POST",'stateload.php');
@@ -18,6 +29,12 @@ function resettxt(){
 	document.getElementById('pages').value = 1;
 	document.getElementById('start').value = 1;
 	document.getElementById('lines').value = 10;
+}
+
+function selectfile(fname){
+    document.getElementById('filename').value = fname;
+    document.getElementById('pages').value = 1;
+    ziporrar();
 }
 
 function ziporrar(){
@@ -114,6 +131,9 @@ function fnext(){
 function fprev(){
     const nowpage = document.getElementById('pages').value;
     prevpage = Number(nowpage) - 1;
+    if (prevpage < 1){
+        prevpage = 1 ;
+    }
     document.getElementById('pages').value = prevpage;
 	const nowline = document.getElementById('start').value;
 	const lines = document.getElementById('lines').value;
@@ -135,3 +155,14 @@ function tprev(){
     document.getElementById('start').value = prevline;
     ziporrar();
 }
+
+document.addEventListener('keydown', function (e) {
+	let output = ``;
+
+	if (e.code == 'KeyA' || e.code == 'ArrowLeft') {
+		fprev();
+	} else if (e.code == 'KeyD' || e.code == 'ArrowRight') {
+		fnext();
+	}
+
+})
