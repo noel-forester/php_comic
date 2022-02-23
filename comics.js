@@ -9,6 +9,10 @@ function loadfilelist(){
     });
 }
 
+function refresh_list(){
+    xhr.open("POST",'make_filelist.php');
+}
+
 function stateload(){
     var xhr = new XMLHttpRequest();
     xhr.open("POST",'stateload.php');

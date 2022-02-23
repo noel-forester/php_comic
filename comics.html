@@ -6,7 +6,11 @@
 </head>
 <body onload="first_load()">
     <div class="left_menu">
-        <div class="left_menu_title">File List</div>
+        <div class="left_menu_title">
+            <a href="#" onclick="refresh_list();return false;">
+                refresh list
+            </a>
+            File List</div>
         <div class="left_menu_item" id="filelist"></div>
     </div>
     <form class="form" id="form" action="" method="POST">
