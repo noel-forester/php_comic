@@ -30,12 +30,12 @@ function recursion(array $dirs): string {
    
     foreach ($dirs as $parent => $child) {
         if (is_array($child)) {
-            $li .= '<li>' . $parent . recursion($child) . '</li>';
+            $li .= '<li class="left_menu_items">' . $parent . recursion($child) . '</li>';
         } else {
-            $li .= '<li><a class="filename" href="#" onclick="selectfile(\'' . $child .  '\');return false;">' . $parent . '</a></li>';
+            $li .= '<li class="left_menu_items"><a class="filename" href="#" onclick="selectfile(\'' . $child .  '\');return false;">' . $parent . '</a></li>';
         }
     }
-    return '<ul>' . $li . '</ul>';
+    return '<ul class="left_menu_items">' . $li . '</ul>';
 }
 
     $spath = '/mnt/lvm/documents/books';

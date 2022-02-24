@@ -27,6 +27,12 @@ p{
 
 .left_menu_item{
 	font-size: 1vw;
+	padding-left: 0.5vw;
+}
+
+.left_menu_items{
+	list-style-type: none;
+
 }
 
 .form{
