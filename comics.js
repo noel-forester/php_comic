@@ -10,7 +10,13 @@ function loadfilelist(){
 }
 
 function refresh_list(){
+    var xhr = new XMLHttpRequest();
     xhr.open("POST",'make_filelist.php');
+    xhr.responseType = "text";
+    xhr.addEventListener('load', function (response) {
+        loadfilelist();
+    });
+    xhr.send();
 }
 
 function stateload(){
