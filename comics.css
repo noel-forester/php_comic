@@ -37,6 +37,10 @@ img{
     height: 90vh;
 }
 
+.pics{
+	height: 88vh;
+}
+
 .pics_over_control{
 	margin: 10px;
 	position: relative;
